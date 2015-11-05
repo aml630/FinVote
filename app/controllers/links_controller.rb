@@ -7,6 +7,9 @@ class LinksController < ApplicationController
   # GET /links.json
   def index
     @links = Link.all
+    #@links = Link.order(:cached_weighted_average => :desc)
+
+
   end
 
   # GET /links/1
@@ -67,6 +70,7 @@ class LinksController < ApplicationController
     @link = Link.find(params[:id])
     @link.upvote_by current_user
     redirect_to :back
+
   end
 
   def downvote
