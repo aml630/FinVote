@@ -12,18 +12,18 @@
 					<% end %>
 <!--tryign to insert voting into comments.  at least I have them in the right place, even if theyre the wrong links -->
 
-				<%= link_to like_link_path(@link), method: :put, class: "btn btn-default btn-sm" do %>
+				<%= link_to like_comment_path(comment), method: :put, class: "btn btn-default btn-sm" do %>
 					<span class="glyphicon glyphicon-chevron-up"></span>
-					Upvote
-					<%= @link.get_upvotes.size %>
+
+					<%= comment.get_upvotes.size %>
 			<% end %>
 
-			<%= link_to dislike_link_path(@link), method: :put, class: "btn btn-default btn-sm" do %>
+			<%= link_to dislike_comment_path(comment), method: :put, class: "btn btn-default btn-sm" do %>
 		    <span class="glyphicon glyphicon-chevron-down">
-		    Downvote
-		    <%= @link.get_downvotes.size %>
+
+		    <%= comment.get_downvotes.size %>
 		  <% end %>
-			
+
 		</div>
 	</div>
 <% end %>
