@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get 'static_pages/about'
+
   resources :comments do
     member do
       put "like", to:    "comments#upvote"
