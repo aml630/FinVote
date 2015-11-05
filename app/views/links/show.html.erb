@@ -31,7 +31,7 @@
 </h3>
 
 <div id="comments">
-  <%= render :partial => @link.comments %>
+  <%= render :partial => @link.comments.order(:cached_votes_score => :desc) %>
 </div>
 <%= simple_form_for [@link, Comment.new]  do |f| %>
   <div class="field">

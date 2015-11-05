@@ -16,6 +16,11 @@ class CommentsController < ApplicationController
         format.json { render json: @comment.errors, status: :unprocessable_entity }
       end
     end
+
+
+    @comment = Comment.order(:cached_votes_score => :desc)
+
+
   end
 
   # DELETE /comments/1
