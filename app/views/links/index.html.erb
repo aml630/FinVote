@@ -1,25 +1,49 @@
+<div class="row">
 
-<a href="<%= root_path %>" class="btn btn-success" role="button">Top</a>
-<a href="<%= root_path %>" class="btn btn-success" role="button">All Time</a>
-<a href="<%= root_path %>" class="btn btn-success" role="button">Recent Additions</a>
+    <div class="col-xs-12 col-sm-6 col-md-7">
 
-<% @links.each do |link| %>
-  <div class="link row clearfix">
+        <div class="row">
+            <div class="col-xs-6 col-sm-3">
 
-    <h2>
+                <div class="span4 collapse-group">
+                    <h2>Heading</h2>
+                    <p class="collapse" id="viewdetails">Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
+                    <p><a class="btn" data-toggle="collapse" data-target="#viewdetails">View details &raquo;</a></p>
+                </div>
+            </div>
+            <div class="col-xs-6 col-sm-3">
+                <div class="span2 collapse-group">
+                    <h2>Heading</h2>
+                    <p class="collapse" id="viewdetails2">Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
+                    <p><a class="btn" data-toggle="collapse" data-target="#viewdetails2">View details &raquo;</a></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <div class="col-xs-6 col-md-5">
+        <a href="<%= root_path %>" class="btn btn-success" role="button">Top</a>
+        <a href="<%= root_path %>" class="btn btn-success" role="button">All Time</a>
+        <a href="<%= root_path %>" class="btn btn-success" role="button">Recent Additions</a>
+
+        <% @links.each do |link| %>
+            <div class="link row clearfix">
+
+                <h2>
       <%= link_to link.title, link.url %><br>
       <small class="author">Submitted <%= time_ago_in_words(link.created_at) %> by <%= link.user.name %></small>
     </h2>
 
-    <div class="btn-group">
+                <div class="btn-group">
 
-      <%= link_to like_link_path(link), method: :put, class: "btn btn-default btn-sm" do %>
-        <span class="glyphicon glyphicon-chevron-up"></span>
-        Upvote
-        <%= link.get_upvotes.size %>
-      <% end %>
-      <%= link_to dislike_link_path(link), method: :put, class: "btn btn-default btn-sm" do %>
-        <span class="glyphicon glyphicon-chevron-down">
+                    <%= link_to like_link_path(link), method: :put, class: "btn btn-default btn-sm" do %>
+                        <span class="glyphicon glyphicon-chevron-up"></span> Upvote
+                        <%= link.get_upvotes.size %>
+                            <% end %>
+                                <%= link_to dislike_link_path(link), method: :put, class: "btn btn-default btn-sm" do %>
+                                    <span class="glyphicon glyphicon-chevron-down">
         Downvote
         <%= link.get_downvotes.size %>
       <% end %>
@@ -28,3 +52,8 @@
     </div>
   </div>
 <% end %>
+
+
+</div>
+
+</div>
