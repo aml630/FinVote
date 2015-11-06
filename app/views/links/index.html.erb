@@ -1,21 +1,53 @@
-<div class="row">
 
-    <div class="col-xs-12 col-sm-6 col-md-7">
+
+
+    <div class="col-lg-9 col-md-9 col-sm-9">
 
         <div class="row">
-            <div class="col-xs-6 col-sm-3">
+            <div class="col-xs-4 col-sm-4">
 
                 <div class="span4 collapse-group">
-                    <h2>Heading</h2>
-                    <p class="collapse" id="viewdetails">Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
+                    <h2>The Motley Fool/</h2>
+                    <ul class="collapse" id="viewdetails">
+
+                        <li><a href ="http://www.bloomberg.com/news/articles/2015-11-06/one-of-yellen-s-most-important-labor-market-measures-now-looks-a-lot-better">One of Yellens Most Important Labor Market Measures</a>  </li>
+
+          
+
+                        <li><a href ="http://www.bloomberg.com/news/articles/2015-11-06/the-oil-industry-has-been-put-on-notice">The Oil Industry Has Been Put on Notice</a></li>
+                        <li><a href ="http://www.bloomberg.com/news/articles/2015-11-06/a-wal-mart-heir-is-27-billion-poorer-than-everyone-calculated">A Wal-Mart Heir Is $27 Billion Poorer Than Everyone Thought><a/></li>
+                    <%#= f.submit "Submit", class: "btn" %>
+                      </ul>
+
+
+
+
                     <p><a class="btn" data-toggle="collapse" data-target="#viewdetails">View details &raquo;</a></p>
                 </div>
             </div>
-            <div class="col-xs-6 col-sm-3">
+            <div class="col-xs-4 col-sm-4">
                 <div class="span2 collapse-group">
-                    <h2>Heading</h2>
+                    <h2>MSNBC</h2>
                     <p class="collapse" id="viewdetails2">Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
                     <p><a class="btn" data-toggle="collapse" data-target="#viewdetails2">View details &raquo;</a></p>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-xs-4 col-sm-4">
+
+                <div class="span4 collapse-group">
+                    <h2>Seeking Alpha</h2>
+                    <p class="collapse" id="viewdetails3">Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
+                    <p><a class="btn" data-toggle="collapse" data-target="#viewdetails3">View details &raquo;</a></p>
+                </div>
+            </div>
+            <div class="col-xs-4 col-sm-4">
+                <div class="span2 collapse-group">
+                    <h2>Bloomberg</h2>
+                    <p class="collapse" id="viewdetails4">Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
+                    <p><a class="btn" data-toggle="collapse" data-target="#viewdetails4">View details &raquo;</a></p>
                 </div>
             </div>
         </div>
@@ -23,13 +55,13 @@
 
 
 
-    <div class="col-xs-6 col-md-5">
+    <div class="col-lg-3 col-md-3 col-sm-3">
         <a href="<%= root_path %>" class="btn btn-success" role="button">Top</a>
         <a href="<%= root_path %>" class="btn btn-success" role="button">All Time</a>
         <a href="<%= root_path %>" class="btn btn-success" role="button">Recent Additions</a>
 
         <% @links.each do |link| %>
-            <div class="link row clearfix">
+            <div class="link row clearfix" id="rightcolumn">
 
                 <h2>
       <%= link_to link.title, link.url %><br>
@@ -52,8 +84,5 @@
     </div>
   </div>
 <% end %>
-
-
-</div>
 
 </div>
