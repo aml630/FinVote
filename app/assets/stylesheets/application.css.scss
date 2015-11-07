@@ -17,10 +17,42 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
 
+
+.nopad {
+padding: 0px;
+margin: 0px;
+	line-height: 0px
+}
+.apost{
+font-size: 35px;
+border-bottom: solid;
+
+
+}
+#postlist{
+font-size: 35px;
+
+}
+
+.sidebar {
+
+float: right;
+
+}
+
+.text {
+	font-size: 18px;
+}
+.author {
+	font-size: 15px;
+}
+
 #rightcolumn {
 
-background-color: #A1FFA1;
-border-radius: 15px 50px 30px;
+/*background-color: #e7e7e7; */
+
+padding: 0px;
+margin: 0px;
 
 }
 
@@ -37,6 +69,7 @@ border-radius: 15px 50px 30px;
 
 #main_content {
 	#content {
+
 		float: none;
 	}
 	padding-bottom: 100px;

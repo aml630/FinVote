@@ -10,26 +10,26 @@
                     <h2>The Motley Fool/</h2>
                     <ul class="collapse" id="viewdetails">
 
+<li> <div class = "form-group">
+<%= label :title, "heythis" %>
+<%= label :url, "http://www.bloomberg.com/news/articles/2015-11-06/one-of-yellen-s-most-important-labor-market-measures-now-looks-a-lot-better" %>
+
+<%#= f.submit "Submit", class: "btn btn-lg btn-primary" %>
+   </div>
+ </li>
                         <li><a href ="http://www.bloomberg.com/news/articles/2015-11-06/one-of-yellen-s-most-important-labor-market-measures-now-looks-a-lot-better">One of Yellens Most Important Labor Market Measures</a>  </li>
-
-          
-
                         <li><a href ="http://www.bloomberg.com/news/articles/2015-11-06/the-oil-industry-has-been-put-on-notice">The Oil Industry Has Been Put on Notice</a></li>
                         <li><a href ="http://www.bloomberg.com/news/articles/2015-11-06/a-wal-mart-heir-is-27-billion-poorer-than-everyone-calculated">A Wal-Mart Heir Is $27 Billion Poorer Than Everyone Thought><a/></li>
                     <%#= f.submit "Submit", class: "btn" %>
                       </ul>
-
-
-
-
-                    <p><a class="btn" data-toggle="collapse" data-target="#viewdetails">View details &raquo;</a></p>
+                    <p><button type = "button" class="btn btn-primary btn-lg active" data-toggle="collapse" data-target="#viewdetails">View details &raquo;</button></p>
                 </div>
             </div>
             <div class="col-xs-4 col-sm-4">
                 <div class="span2 collapse-group">
                     <h2>MSNBC</h2>
                     <p class="collapse" id="viewdetails2">Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
-                    <p><a class="btn" data-toggle="collapse" data-target="#viewdetails2">View details &raquo;</a></p>
+                    <p><button type = "button" class="btn btn-primary btn-lg active" data-toggle="collapse" data-target="#viewdetails2">View details &raquo;</button></p>
                 </div>
             </div>
         </div>
@@ -40,14 +40,14 @@
                 <div class="span4 collapse-group">
                     <h2>Seeking Alpha</h2>
                     <p class="collapse" id="viewdetails3">Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
-                    <p><a class="btn" data-toggle="collapse" data-target="#viewdetails3">View details &raquo;</a></p>
+                    <p><button type = "button" class="btn btn-primary btn-lg active" data-toggle="collapse" data-target="#viewdetails3">View details &raquo;</button></p>
                 </div>
             </div>
             <div class="col-xs-4 col-sm-4">
                 <div class="span2 collapse-group">
                     <h2>Bloomberg</h2>
                     <p class="collapse" id="viewdetails4">Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
-                    <p><a class="btn" data-toggle="collapse" data-target="#viewdetails4">View details &raquo;</a></p>
+                    <p><button type = "button" class="btn btn-primary btn-lg active" data-toggle="collapse" data-target="#viewdetails4">View details &raquo;</button></p>
                 </div>
             </div>
         </div>
@@ -61,10 +61,10 @@
         <a href="<%= root_path %>" class="btn btn-success" role="button">Recent Additions</a>
 
         <% @links.each do |link| %>
-            <div class="link row clearfix" id="rightcolumn">
-
+              <!-- class="link row clearfix" -->
+    <div id="rightcolumn">
                 <h2>
-      <%= link_to link.title, link.url %><br>
+      <div class = "text"> <%= link_to link.title, link.url %><br> </div>
       <small class="author">Submitted <%= time_ago_in_words(link.created_at) %> by <%= link.user.name %></small>
     </h2>
 
